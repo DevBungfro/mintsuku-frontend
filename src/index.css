@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: Mustica-regular, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #121212;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: Mustica-Regular;
+  src: url('/src/fonts/MusticaPro-Regular.otf');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: Mustica-Medium;
+  src: url('/src/fonts/MusticaPro-Medium.otf');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: Mustica-Bold;
+  src: url('/src/fonts/MusticaPro-Bold.otf');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: Mustica-Light;
+  src: url('/src/fonts/MusticaPro-Light.otf');
+
+  font-weight: normal;
+  font-style: normal;
+
+
+}
+
+
+@font-face {
+  font-family: Mustica-ExtraBold;
+  src: url('/src/fonts/MusticaPro-ExtraBold.otf');
+
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+@font-face {
+  font-family: Mustica-Black;
+  src: url('/src/fonts/MusticaPro-Black.otf');
+
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+@font-face {
+  font-family: Mustica-SemiBold;
+  src: url('/src/fonts/MusticaPro-SemiBold.otf');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 60px;
+  aspect-ratio: 2;
+  --_g: no-repeat radial-gradient(circle closest-side,#7e5af2 90%,#0000);
+  background: 
+    var(--_g) 0%   50%,
+    var(--_g) 50%  50%,
+    var(--_g) 100% 50%;
+  background-size: calc(60%/3) 50%;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {
+    20%{background-position:0%   0%, 50%  50%,100%  50%}
+    40%{background-position:0% 100%, 50%   0%,100%  50%}
+    60%{background-position:0%  50%, 50% 100%,100%   0%}
+    80%{background-position:0%  50%, 50%  50%,100% 100%}
+}
+
+
+@keyframes scale {
+  0% {
+      transform: scale(0);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+@keyframes scaleOut {
+  0% {
+      transform: scale(1);
+  }
+  100% {
+      transform: scale(0);
+  }
+}
+
+
+.animate-scale {
+  animation: scale 0.2s ease-in-out;
+}
+
+.closed-image {
+  animation: scaleOut 0.2s ease-in-out;
+}
